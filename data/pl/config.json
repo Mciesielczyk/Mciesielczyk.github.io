@@ -1,0 +1,53 @@
+{
+  "profile": {
+    "name": "Michał",
+    "surname": "Ciesielczyk",
+    "avatars": ["images/avatar1.jpg", "images/avatar2.jpg"],
+    "role": "Student 3. roku Informatyki | Pasjonat Java & Spring Boot",
+    "github_username": "TWOJ_NICK",
+    "email": "twoj.email@gmail.com",
+    "linkedin": "https://linkedin.com/in/twoj-profil"
+  },
+  "about": {
+    "description": "Szukam stażu w IT. Interesuję się tworzeniem skalowalnych aplikacji backendowych, architekturą mikroserwisów oraz optymalizacją zapytań SQL."
+  },
+  "experience": [
+    {
+      "category": "it",
+      "company": "Prywatny Tutor / Szkoła Programowania",
+      "role": "Tutor Programowania (Lua)",
+      "period": "2023 - obecnie",
+      "tasks": [
+        "Nauka podstaw algorytmiki i struktur danych z wykorzystaniem języka Lua.",
+        "Debugowanie kodu i pomoc w rozwiązywaniu problemów logicznych.",
+        "Przygotowywanie materiałów dydaktycznych i prostych silników gier."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "Firma X",
+      "role": "Poprzednie Stanowisko",
+      "period": "2021 - 2022",
+      "tasks": ["Obsługa klienta", "Zarządzanie czasem"]
+    }
+  ],
+  "skills_groups": [
+    {
+      "name": "Backend",
+      "items": [
+        {
+          "name": "Java 21",
+          "details": "Użyta w projekcie System Rezerwacji do implementacji logiki biznesowej, stream API oraz walidacji danych."
+        },
+        {
+          "name": "Spring Boot",
+          "details": "Wykorzystany do stworzenia RESTful API, integracji z bazą danych przez Spring Data JPA oraz zabezpieczenia endpointów."
+        }
+      ]
+    },
+    {
+      "name": "Bazy Danych & Devops",
+      "items": ["PostgreSQL", "Docker", "Git", "SQL"]
+    }
+  ]
+}

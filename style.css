@@ -27,3 +27,43 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    transition: opacity 0.5s ease-in-out; /* Płynne znikanie/pojawianie */
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.skill-group-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.skill-badge {
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    color: #1e242f;
+}
+
+.skill-badge:hover {
+    background: #00d4ff !important;
+    color: #1e1e2f !important;
+    transform: scale(1.1);
+}
+
+/* Klasa do podświetlania pasujących projektów */
+.project-highlight {
+    border: 2px solid #00d4ff !important;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}

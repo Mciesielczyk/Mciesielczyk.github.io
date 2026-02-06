@@ -1,0 +1,16 @@
+[
+  {
+    "title": "System Rezerwacji API",
+    "description": "Kompletny backend w Spring Boot z walidacją dat.",
+    "tech": ["Java", "Spring", "H2"],
+    "link": "https://github.com/twojnick/booking-api",
+    "image": "images/booking.png"
+  },
+  {
+    "title": "Analizator Wydatków",
+    "description": "Prosta aplikacja konsolowa do zarządzania budżetem.",
+    "tech": ["Java", "Maven"],
+    "link": "https://github.com/twojnick/finance-app",
+    "image": "images/finance.png"
+  }
+]

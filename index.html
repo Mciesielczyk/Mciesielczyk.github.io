@@ -3,33 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Kowalski - Student IT & Junior Java Developer</title>
+    <title>Portfolio | Jan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Cześć, jestem Jan</h1>
-    <p>Student 3. roku Informatyki | Pasjonat Java & Spring Boot</p>
-</header>
 
-<section id="about">
-    <h2>O mnie</h2>
-    <p>Szukam stażu w IT. Interesuję się tworzeniem skalowalnych aplikacji backendowych.</p>
-</section>
+<div class="container text-end mt-3">
+    <button id="lang-btn" class="btn btn-lang">EN</button>
+</div>
 
-<section id="projects">
-    <h2>Moje Projekty</h2>
-    <div class="project">
-        <h3>System Rezerwacji (Spring Boot)</h3>
-        <p>Backend aplikacji do zarządzania rezerwacjami. Wykorzystano: Java 21, PostgreSQL, Docker.</p>
-        <a href="LINK_DO_TWOJEGO_DRUGIEGO_REPO">Zobacz kod na GitHub</a>
+<div class="container">
+    <header>
+        <img id="profile-avatar" src="" alt="Awatar" class="avatar-img mb-3">
+
+        <h1 class="display-4 fw-bold">Cześć, jestem <span id="header-name" style="color: #00d4ff;">...</span></h1>
+        <p id="header-role" class="lead">...</p>
+        ...
+    </header>
+
+    <section id="about" class="mb-5 text-center">
+        <h2 class="fw-bold">O mnie</h2>
+        <p id="about-description" class="mx-auto" style="max-width: 600px;">...</p>
+        <div id="skills-list" class="mt-3">
+        </div>
+    </section>
+
+    <section id="skills" class="py-4 text-center">
+        <div id="skills-container" class="d-flex flex-wrap justify-content-center gap-4">
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <h2 class="mb-4 fw-bold text-center">Wybrane projekty</h2>
+        <div id="projects-container" class="row g-4">
+        </div>
+    </section>
+
+    <section id="experience" class="mb-5">
+        <h2 class="fw-bold text-center">Doświadczenie</h2>
+        <div id="experience-list-it" class="mx-auto" style="max-width: 800px;">
+        </div>
+
+        <div class="text-center mt-3">
+            <button id="toggle-other-exp" class="btn btn-outline-secondary btn-sm" style="display: none;">
+                Pokaż inne doświadczenie
+            </button>
+        </div>
+
+        <div id="experience-list-other" class="mx-auto mt-3 collapse" style="max-width: 800px;">
+        </div>
+    </section>
+
+    <footer id="contact" class="py-5 text-center border-top border-secondary">
+        <h2 class="fw-bold">Kontakt</h2>
+        <p id="contact-email">...</p>
+        <a id="linkedin-link" href="#" class="btn btn-outline-light">LinkedIn</a>
+    </footer>
+
+
+
+
+</div>
+
+
+<div class="modal fade" id="skillModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-info">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="skillModalTitle">Szczegóły umiejętności</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="skillModalBody">
+            </div>
+        </div>
     </div>
-</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
-<section id="contact">
-    <h2>Kontakt</h2>
-    <p>Email: twoj.email@gmail.com</p>
-    <a href="LINK_DO_LINKEDIN">LinkedIn</a>
-</section>
 </body>
 </html>
