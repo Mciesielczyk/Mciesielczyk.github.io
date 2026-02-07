@@ -1,69 +1,146 @@
+/* --- TŁO Z EFEKTEM GŁĘBI --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #2d3436;
+    margin: 0;
+    padding: 0;
+    /* Ciekawe tło: gradient z delikatnym szumem lub poświatą */
+    background:
+            radial-gradient(circle at 0% 0%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 100% 100%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+            #ffffff;
+    background-attachment: fixed;
 }
 
+/* --- NAGŁÓWEK --- */
 header {
     text-align: center;
-    padding: 50px 0;
-    background: #2c3e50;
-    color: white;
+    padding: 80px 0;
+    /* Gradient linearny dla odcięcia góry */
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-h2 {
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 10px;
-}
-
-.project {
-    background: white;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
+/* --- AWATAR --- */
 .avatar-img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #00d4ff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-    transition: opacity 0.5s ease-in-out; /* Płynne znikanie/pojawianie */
+    border-radius: 30px; /* Nowoczesny "squircle" zamiast koła */
+    border: 5px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.fade-out {
-    opacity: 0;
+.avatar-img:hover {
+    transform: translateY(-5px) rotate(2deg);
 }
 
+/* --- SKILLE (GLASSMORPHISM LIGHT) --- */
 .skill-group-box {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
     border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
 }
 
 .skill-badge {
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.2s ease;
     display: inline-block;
-    color: #1e242f;
+    background: #f1f2f6 !important;
+    color: #2d3436 !important;
+    border: 1px solid #dfe4ea !important;
+    padding: 8px 16px !important;
+    margin: 4px;
+    border-radius: 12px !important;
+    font-weight: 600;
 }
 
 .skill-badge:hover {
     background: #00d4ff !important;
-    color: #1e1e2f !important;
-    transform: scale(1.1);
+    color: white !important;
+    border-color: #00d4ff !important;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
 }
 
-/* Klasa do podświetlania pasujących projektów */
+/* --- KARTY PROJEKTÓW --- */
+.card {
+    background: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border-color: #00d4ff !important;
+}
+
+/* --- KONTAKT (ESTETYCZNA LISTA) --- */
+.contact-details {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+}
+
+.contact-item:hover {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.contact-label {
+    color: #00d4ff;
+    font-weight: 800;
+    width: 90px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-value, .contact-value a {
+    color: #2d3436 !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* --- PRZYCISK JĘZYKA --- */
+.btn-lang {
+    background: #2d3436;
+    color: white;
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-weight: bold;
+    border: none;
+}
+
+
+
 .project-highlight {
     border: 2px solid #00d4ff !important;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6) !important;
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+}
+
+/* Dodaj to do zwykłej klasy .card, żeby powrót z podświetlenia był płynny */
+.card {
+    transition: all 0.5s ease !important;
 }

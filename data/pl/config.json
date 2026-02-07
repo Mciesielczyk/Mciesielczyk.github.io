@@ -3,13 +3,14 @@
     "name": "Michał",
     "surname": "Ciesielczyk",
     "avatars": ["images/avatar1.jpg", "images/avatar2.jpg"],
-    "role": "Student 3. roku Informatyki | Pasjonat Java & Spring Boot",
-    "github_username": "TWOJ_NICK",
-    "email": "twoj.email@gmail.com",
-    "linkedin": "https://linkedin.com/in/twoj-profil"
+    "role": "Student 3 roku Informatyki na PK | Tutor w firmie Kodland",
+    "github_username": "Mciesielczyk",
+    "email": "michaelciesielczyk12@gmail.com",
+    "phone": "+48 534 830 654",
+    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/"
   },
   "about": {
-    "description": "Szukam stażu w IT. Interesuję się tworzeniem skalowalnych aplikacji backendowych, architekturą mikroserwisów oraz optymalizacją zapytań SQL."
+    "description": "Jestem studentem 6. semestru informatyki na Politechnice Krakowskiej. Moja droga do IT była naturalnym wyborem – od zawsze najlepiej czułem się w naukach ścisłych, a zainteresowanie matematyką przełożyło się na analityczne podejście do rozwiązywania problemów. Nie boję się wyzwań; bezpośrednio po maturze podjąłem pracę zawodową, co pozwoliło mi wypracować odpowiedzialność i świetną organizację czasu jeszcze przed rozpoczęciem kariery technicznej. Obecnie szukam pierwszej szansy zawodowej, aby zobaczyć, jak od środka funkcjonują procesy w firmach technologicznych i wnieść wartość do realnych, komercyjnych projektów."
   },
   "experience": [
     {
@@ -33,21 +34,58 @@
   ],
   "skills_groups": [
     {
-      "name": "Backend",
+      "name": "Backend & Core",
       "items": [
+        { "name": "Java", "details": "Tworzenie logiki biznesowej, Swing (GUI), wielowątkowość." },
         {
-          "name": "Java 21",
-          "details": "Użyta w projekcie System Rezerwacji do implementacji logiki biznesowej, stream API oraz walidacji danych."
+          "name": "C# / .NET",
+          "details": "ASP.NET Core 8, Entity Framework. Wykorzystany w systemie zarządzania serwisem samochodowym.",
+          "projects": ["car-service"]
         },
-        {
-          "name": "Spring Boot",
-          "details": "Wykorzystany do stworzenia RESTful API, integracji z bazą danych przez Spring Data JPA oraz zabezpieczenia endpointów."
-        }
+        { "name": "C++", "details": "Programowanie obiektowe, Qt Framework (GUI), systemy fabryczne." },
+        { "name": "Python", "details": "Automatyzacja, analiza danych w środowisku Google Colab." },
+        { "name": "PHP", "details": "Podstawy tworzenia skryptów po stronie serwera." }
       ]
     },
     {
-      "name": "Bazy Danych & Devops",
-      "items": ["PostgreSQL", "Docker", "Git", "SQL"]
+      "name": "Web & Frontend",
+      "items": [
+        { "name": "HTML5 / CSS3", "details": "Budowanie responsywnych struktur i layoutów stron." },
+        { "name": "JavaScript", "details": "Dodawanie interaktywności na stronach (DOM, Eventy)." },
+        { "name": "Figma", "details": "Projektowanie interfejsów użytkownika (UI/UX) i prototypowanie." }
+      ]
+    },
+    {
+      "name": "Game Dev & Scripting",
+      "items": [
+        { "name": "Unity", "details": "Tworzenie gier 2D/3D w języku C# (projekty semestralne)." },
+        { "name": "Roblox Studio", "details": "Zaawansowane skryptowanie w języku Lua, mechaniki gier." },
+        { "name": "Lua Tutor", "details": "Doświadczenie w nauczaniu programowania i logiki silnika Roblox." }
+      ]
+    },
+    {
+      "name": "Infrastruktura i Sieci",
+      "items": [
+        { "name": "Docker", "details": "Konteneryzacja aplikacji i zarządzanie środowiskami." },
+        { "name": "Git", "details": "Zaawansowana kontrola wersji, praca na gałęziach (branches)." },
+        { "name": "Packet Tracer", "details": "Projektowanie i symulacja sieci komputerowych (Cisco)." },
+        { "name": "Linux", "details": "Praca w terminalu, zarządzanie procesami i plikami." }
+      ]
+    },
+    {
+      "name": "Grafika i Inżynieria 3D",
+      "items": [
+        { "name": "AutoCAD", "details": "Tworzenie precyzyjnej dokumentacji technicznej i rysunków 2D." },
+        { "name": "3ds Max", "details": "Modelowanie obiektów 3D i podstawy wizualizacji." },
+        { "name": "DaVinci Resolve", "details": "Montaż wideo i postprodukcja." },
+        { "name": "Photopea", "details": "Obróbka grafiki rastrowej (alternatywa dla Photoshopa)." }
+      ]
+    },
+    {
+      "name": "Narzędzia Biurowe",
+      "items": [
+        { "name": "Excel / Word", "details": "Praca z arkuszami kalkulacyjnymi (formuły, raporty) i dokumentacją." }
+      ]
     }
   ]
 }

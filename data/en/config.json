@@ -1,18 +1,22 @@
 {
   "profile": {
-    "name": "Micaaaaaaaaaaaaaaaaaaaaaaaaahał",
+    "name": "Michał",
     "surname": "Ciesielczyk",
     "avatars": ["images/avatar1.jpg", "images/avatar2.jpg"],
-    "role": "Student 3. roku Informatyki | Pasjonat Java & Spring Boot",
-    "github_username": "TWOJ_NICK",
-    "email": "twoj.email@gmail.com",
-    "linkedin": "https://linkedin.com/in/twoj-profil"
+    "role": "Junior Software Engineer | CS Student at CUT | Coding Tutor at Kodland",
+    "github_username": "Mciesielczyk",
+    "email": "michaelciesielczyk12@gmail.com",
+    "phone": "+48 534 830 654",
+    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/"
   },
+
   "about": {
-    "description": "Szukam stażu w IT. Interesuję się tworzeniem skalowalnych aplikacji backendowych, architekturą mikroserwisów oraz optymalizacją zapytań SQL."
+    "description": "I am a 6th-semester Computer Science student at the Cracow University of Technology (PK). My path to IT was a natural choice—I have always excelled in STEM fields, and my passion for mathematics has translated into an analytical approach to problem-solving. I am not afraid of challenges; immediately after high school, I entered the workforce, which allowed me to develop a strong sense of responsibility and excellent time management skills before starting my technical career. Currently, I am seeking my first professional opportunity to gain insight into how technological processes function from within and to bring value to real-world, commercial projects."
   },
+
   "experience": [
     {
+      "category": "it",
       "company": "Prywatny Tutor / Szkoła Programowania",
       "role": "Tutor Programowania (Lua)",
       "period": "2023 - obecnie",
@@ -21,7 +25,69 @@
         "Debugowanie kodu i pomoc w rozwiązywaniu problemów logicznych.",
         "Przygotowywanie materiałów dydaktycznych i prostych silników gier."
       ]
+    },
+    {
+      "category": "other",
+      "company": "Firma X",
+      "role": "Poprzednie Stanowisko",
+      "period": "2021 - 2022",
+      "tasks": ["Obsługa klienta", "Zarządzanie czasem"]
     }
   ],
-  "skills": ["Java 21", "Spring Boot", "Hibernate", "Docker", "SQL", "Git"]
+  "skills_groups": [
+    {
+      "name": "Backend & Core",
+      "items": [
+        { "name": "Java", "details": "Business logic development, Swing (GUI), multithreading." },
+        {
+          "name": "C# / .NET",
+          "details": "ASP.NET Core 8, Entity Framework. Implemented in the car service management system.",
+          "projects": ["car-service"]
+        },
+        { "name": "C++", "details": "Object-oriented programming, Qt Framework (GUI), factory systems." },
+        { "name": "Python", "details": "Automation, data analysis within Google Colab environment." },
+        { "name": "PHP", "details": "Foundations of server-side scripting." }
+      ]
+    },
+    {
+      "name": "Web & Frontend",
+      "items": [
+        { "name": "HTML5 / CSS3", "details": "Building responsive structures and web layouts." },
+        { "name": "JavaScript", "details": "Enhancing website interactivity (DOM, Events)." },
+        { "name": "Figma", "details": "User interface design (UI/UX) and prototyping." }
+      ]
+    },
+    {
+      "name": "Game Dev & Scripting",
+      "items": [
+        { "name": "Unity", "details": "2D/3D game development in C# (semester projects)." },
+        { "name": "Roblox Studio", "details": "Advanced scripting in Lua, game mechanics design." },
+        { "name": "Lua Tutor", "details": "Experience in teaching programming and Roblox engine logic." }
+      ]
+    },
+    {
+      "name": "Infrastructure & Networking",
+      "items": [
+        { "name": "Docker", "details": "Application containerization and environment management." },
+        { "name": "Git", "details": "Advanced version control, branching strategies." },
+        { "name": "Packet Tracer", "details": "Design and simulation of computer networks (Cisco)." },
+        { "name": "Linux", "details": "Terminal operations, process and file management." }
+      ]
+    },
+    {
+      "name": "Graphics & 3D Engineering",
+      "items": [
+        { "name": "AutoCAD", "details": "Creating precise technical documentation and 2D drawings." },
+        { "name": "3ds Max", "details": "3D object modeling and visualization basics." },
+        { "name": "DaVinci Resolve", "details": "Video editing and post-production." },
+        { "name": "Photopea", "details": "Raster graphics processing (Photoshop alternative)." }
+      ]
+    },
+    {
+      "name": "Office Tools",
+      "items": [
+        { "name": "Excel / Word", "details": "Advanced spreadsheet operations (formulas, reports) and documentation." }
+      ]
+    }
+  ]
 }

@@ -1,16 +1,122 @@
 [
+
   {
-    "title": "System Rezerwacji API",
-    "description": "Kompletny backend w Spring Boot z walidacją dat.",
-    "tech": ["Java", "Spring", "H2"],
-    "link": "https://github.com/twojnick/booking-api",
-    "image": "images/booking.png"
+    "id": "opinio",
+    "title": "Opinio - Platforma Społecznościowa",
+    "description": "Aplikacja webowa oparta na architekturze MVC (bez frameworków). System dopasowań użytkowników na podstawie testów poglądów, wyposażony w czat w czasie rzeczywistym (AJAX/Fetch API) oraz zaawansowaną logikę bazy danych PostgreSQL (triggery, widoki, transakcje). Całość skonteneryzowana w Dockerze.",
+    "tech": ["PHP (MVC)", "PostgreSQL", "Docker", "JavaScript (AJAX)", "HTML/CSS"],
+    "link": "https://github.com/Mciesielczyk/Opinio",
+    "image": "images/opinio.png"
   },
+
+
   {
-    "title": "Analizator Wydatków",
-    "description": "Prosta aplikacja konsolowa do zarządzania budżetem.",
-    "tech": ["Java", "Maven"],
-    "link": "https://github.com/twojnick/finance-app",
-    "image": "images/finance.png"
+    "id": "traffic-sim",
+    "title": "Traffic Simulation System",
+    "description": "Agentowy symulator ruchu drogowego oparty na logice autonomicznych pojazdów. Projekt implementuje wzorce projektowe (Strategy, Observer, Builder), oferując symulację 60 FPS (JavaFX Canvas API), dynamiczne zarządzanie topologią mapy oraz moduł analityczny do wykrywania zatorów.",
+    "tech": ["Java", "JavaFX", "Design Patterns", "SOLID"],
+    "link": "https://github.com/Mciesielczyk/Technologie-Obiektowe---V-semestr",
+    "image": "images/car.png"
+  },
+
+  {
+    "id": "codibly-backend",
+    "title": "Energy Mix & Optimizer API",
+    "description": "Serwis backendowy integrujący się z zewnętrznym API Carbon Intensity. Aplikacja przetwarza dane o miksie energetycznym, wylicza średnie dobowe oraz implementuje algorytm optymalizacji okien czasowych dla ładowania urządzeń w oparciu o czystą energię. Całość wdrożona na chmurze Render.",
+    "tech": ["Java", "Spring Boot", "REST API", "External API Integration", "Render (Cloud)"],
+    "link": "https://github.com/Mciesielczyk/codibly-backend",
+    "image": "images/pogoda.png"
+  },
+
+
+  {
+    "id": "dotnet-exercises",
+    "title": ".NET Programming Exercises 2025",
+    "description": "Repozytorium z zadaniami implementacyjnymi w C# i .NET. Zawiera projekty z zakresu programowania obiektowego (OOP), obsługi zdarzeń (Events & Delegates), testów jednostkowych oraz przetwarzania równoległego. Kluczowe moduły obejmują asynchroniczne pobieranie danych (HttpClient) oraz optymalizację wydajności przy użyciu Parallel.ForEach i Concurrent Collections.",
+    "tech": ["C#", ".NET", "Asynchronous Programming", "Multithreading", "Unit Testing (xUnit/NUnit)"],
+    "link": "https://github.com/Mciesielczyk/.nett/tree/main",
+    "image": "images/met.png"
+  },
+
+
+
+  {
+    "id": "car-service",
+    "title": "Car Service Management System",
+    "description": "Platforma klasy ERP do cyfryzacji warsztatu samochodowego. System oferuje zarządzanie rolami (RBAC), automatyczne generowanie raportów PDF w tle (Background Services), powiadomienia e-mail oraz pełną dokumentację API w Swaggerze. Projekt zoptymalizowany pod kątem wydajności bazy danych (SQL Profiler) i przetestowany pod obciążeniem (NBomber).",
+    "tech": [".NET", "ASP.NET Core API", "MS SQL Server", "EF Core", "Docker", "NLog", "Swagger"],
+    "link": "https://github.com/Mciesielczyk/.nett/tree/Projekt?tab=readme-ov-file",
+    "image": "images/service.jpg"
+  },
+
+
+  {
+    "id": "swift-api",
+    "title": "SWIFT Code Management API",
+    "description": "REST API napisane w języku Go, służące do zarządzania bazą kodów SWIFT. System zawiera moduł parsujący arkusze Excel, automatyczną kategoryzację placówek (Centrale vs Oddziały) oraz pełną integrację z MongoDB. Projekt oferuje interfejs CLI do administracji danymi oraz kompleksowe testy integracyjne handlowców HTTP.",
+    "tech": ["Go (Golang)", "MongoDB", "REST API", "CLI", "Excel Parsing"],
+    "link": "https://github.com/Mciesielczyk/Remitly-Internship-2025",
+    "image": "images/swi.jpg"
+  },
+
+
+  {
+    "id": "blade-mount",
+    "title": "Blade & Mount: Strategia turowa",
+    "description": "Projekt zespołowy - turowa gra strategiczna (TBS) zrealizowana w Javie. Projekt implementuje logikę symulacji bitew, autonomiczne algorytmy decyzyjne AI oraz system zarządzania zasobami. Architektura oparta na wzorcach projektowych (Singleton, Factory) z naciskiem na zasady programowania obiektowego (OOP).",
+    "tech": ["Java", "OOP", "Design Patterns", "Game Logic", "AI Algorithms"],
+    "link": "https://github.com/MichalAntosiewicz/Blade-Mount",
+    "image": "images/blade.png"
+  },
+
+
+  {
+    "id": "aes-python",
+    "title": "AES - Szyfrowanie i deszyfrowanie",
+    "description": "Niskopoziomowa implementacja algorytmu AES (Advanced Encryption Standard) w Pythonie. Projekt obejmuje ręczną realizację operacji matematycznych w ciałach Galois (GF(2^8)), takich jak SubBytes, MixColumns czy autorski mechanizm generowania kluczy rund (Key Expansion). Stworzony jako praktyczne zastosowanie matematyki dyskretnej w kryptografii.",
+    "tech": ["Python", "Cryptography", "Discrete Mathematics", "Algorithms"],
+    "link": "https://github.com/Mciesielczyk/AES",
+    "image": "images/AES1.png"
+  },
+
+
+  {
+    "id": "brick-factory",
+    "title": "Wieloprocesowa Symulacja Fabryki",
+    "description": "Symulator cegielni oparty na komunikacji międzyprocesowej (IPC) w środowisku Linux. Projekt wykorzystuje semafory POSIX do synchronizacji wątków pracowników i procesów ciężarówek, pamięć dzieloną (shm_open) do zarządzania taśmą transportową oraz obsługę sygnałów systemowych do dynamicznego sterowania symulacją. Całość obejmuje logikę kolejkowania FIFO oraz mechanizmy zapobiegania zakleszczeniom.",
+    "tech": ["C++", "POSIX Threads", "IPC (Shared Memory)", "Semaphores", "Signals", "Multiprocessing"],
+    "link": "https://github.com/Mciesielczyk/Cegielnia",
+    "image": "images/fab.jpg"
+  },
+
+
+  {
+    "id": "joke-manager",
+    "title": "System Zarządzania Sucharami",
+    "description": "Multimedialna aplikacja do zarządzania bazą danych żartów, łącząca logikę backendową w C++ z interfejsem graficznym .NET. System integruje zewnętrzne API (cURL) do pobierania treści online oraz chmurę Firebase do synchronizacji danych. Projekt realizuje zaawansowane operacje na kolekcjach, obsługę wyjątków oraz funkcje multimedialne.",
+    "tech": ["C++", ".NET (GUI)", "Firebase", "cURL", "REST API"],
+    "link": "https://github.com/Mciesielczyk/Joke_Manager_Gui",
+    "image": "images/joke.png"
+  },
+
+
+  {
+    "id": "drone-smasher",
+    "title": "Drone Smasher - Unity",
+    "description": "Zespołowy projekt gry strategicznej typu Tower Defense/Clicker stworzony w silniku Unity. System charakteryzuje się zaawansowaną ekonomią opartą na dronach zbieraczach sterowanych przez maszyny stanów (FSM) oraz modułową architekturą ułatwiającą balansowanie statystyk przez inspektor Unity. Odpowiadałem za implementację nowych funkcjonalności oraz wsparcie systemów audio-wizualnych, pracując w workflow opartym o Jirę i Confluence.",
+    "tech": ["Unity (C#)",  "Git / GitHub", "Jira & Confluence", "DOTween"],
+    "link": "https://student-team-cxguovtk.atlassian.net/wiki/x/CAC1Ag",
+    "image": "images/dr.png"
+  },
+
+
+  {
+    "id": "pk-analizator",
+    "title": "Analizator Planu PK",
+    "description": "Projekt zespołowy stworzony w celu automatyzacji wyodrębniania indywidualnych planów zajęć z nieczytelnych arkuszy zbiorczych Excel (.xls, .xlsx). Aplikacja implementuje zaawansowane parsowanie scalonych komórek i inteligentną klasyfikację danych. Jako lider techniczny odpowiadałem za architekturę silnika parsującego w czystym JavaScript (OOP) oraz moduł renderowania widoków z opcją eksportu do PNG.",
+    "tech": ["JavaScript", "SheetJS", "html2canvas", "CSS"],
+    "link": "https://github.com/Mciesielczyk/Analizator_Planu",
+    "image": "images/plan.png"
   }
+
 ]
