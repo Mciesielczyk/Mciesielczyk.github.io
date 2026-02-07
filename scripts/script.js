@@ -82,9 +82,50 @@ document.addEventListener('click', (e) => {
         const isExpanded = otherDiv.classList.contains('show');
         otherDiv.classList.toggle('show');
         e.target.textContent = currentLang === 'pl'
-            ? (isExpanded ? 'Pokaż inne doświadczenie' : 'Ukryj inne doświadczenie')
+            ? (isExpanded ? 'Pokaż inne doświadczenia' : 'Ukryj')
             : (isExpanded ? 'Show other experience' : 'Hide other experience');
     }
 });
+
+const handleScrollSpy = () => {
+    // Lista ID musi być IDENTYCZNA z tym, co masz w HTML i w tej samej kolejności
+    const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
+    const navItems = document.querySelectorAll('.nav-item');
+
+    let currentSection = sections[0];
+
+    // Sprawdzenie dołu strony (dla sekcji Kontakt)
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
+
+    if (isAtBottom) {
+        currentSection = 'contact';
+    } else {
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                const sectionTop = section.offsetTop;
+                // Margines 150px, żeby numerek przeskoczył zanim sekcja dotknie samej góry
+                if (window.scrollY >= sectionTop - 150) {
+                    currentSection = id;
+                }
+            }
+        });
+    }
+
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        // Sprawdzamy czy href (np. "#about") zgadza się z aktualną sekcją
+        if (item.getAttribute('href') === `#${currentSection}`) {
+            item.classList.add('active');
+        }
+    });
+};
+
+// Listenery
+window.addEventListener('scroll', handleScrollSpy);
+window.addEventListener('resize', handleScrollSpy); // Dodatkowo przy zmianie wielkości okna
+document.addEventListener('DOMContentLoaded', handleScrollSpy);
+
+
 
 document.addEventListener('DOMContentLoaded', () => loadData(currentLang));

@@ -7,7 +7,8 @@
     "github_username": "Mciesielczyk",
     "email": "michaelciesielczyk12@gmail.com",
     "phone": "+48 534 830 654",
-    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/"
+    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/",
+    "city": "Kraków"
   },
   "about": {
     "description": "Jestem studentem 6. semestru informatyki na Politechnice Krakowskiej. Moja droga do IT była naturalnym wyborem – od zawsze najlepiej czułem się w naukach ścisłych, a zainteresowanie matematyką przełożyło się na analityczne podejście do rozwiązywania problemów. Nie boję się wyzwań; bezpośrednio po maturze podjąłem pracę zawodową, co pozwoliło mi wypracować odpowiedzialność i świetną organizację czasu jeszcze przed rozpoczęciem kariery technicznej. Obecnie szukam pierwszej szansy zawodowej, aby zobaczyć, jak od środka funkcjonują procesy w firmach technologicznych i wnieść wartość do realnych, komercyjnych projektów."
@@ -15,76 +16,150 @@
   "experience": [
     {
       "category": "it",
-      "company": "Prywatny Tutor / Szkoła Programowania",
+      "company": "Kodland",
       "role": "Tutor Programowania (Lua)",
-      "period": "2023 - obecnie",
+      "period": "07.2025 - obecnie",
       "tasks": [
-        "Nauka podstaw algorytmiki i struktur danych z wykorzystaniem języka Lua.",
-        "Debugowanie kodu i pomoc w rozwiązywaniu problemów logicznych.",
-        "Przygotowywanie materiałów dydaktycznych i prostych silników gier."
+        "Nauka dzieci (8-13) tworzenia gier, podstaw algorytmiki i logiki programowania w języku Lua.",
+        "Przygotowywanie autorskich materiałów dydaktycznych i planów lekcji.",
+        "Współpraca w międzynarodowym zespole w celu zapewnienia wysokiej jakości usług edukacyjnych.",
+        "Zarządzanie komunikacją na linii uczeń-rodzic-firma oraz dbanie o satysfakcję i postępy podopiecznych.",
+        "Pomoc uczniom w debugowaniu kodu, rozwiązywaniu problemów i realizacji własnych projektów.",
+        "Dbanie o porządek administracyjny i realizację celów dydaktycznych zgodnie ze standardami firmy."
       ]
     },
     {
       "category": "other",
-      "company": "Firma X",
-      "role": "Poprzednie Stanowisko",
-      "period": "2021 - 2022",
-      "tasks": ["Obsługa klienta", "Zarządzanie czasem"]
+      "company": "British American Tobacco (BAT)",
+      "role": "Ambasador Marki / Promotor",
+      "period": "07.2025-11.2025",
+      "tasks": [
+        "Bezpośrednia praca z klientem, prezentacja produktów i dystrybucja materiałów promocyjnych.",
+        "Realizacja planów sprzedażowych i promocyjnych zgodnie ze strategią firmy.",
+        "Budowanie pozytywnego wizerunku marki oraz raportowanie wyników pracy."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "Serwis BMW",
+      "role": "Pracownik wsparcia technicznego i utrzymania",
+      "period": "06.2025-09.2025",
+      "tasks": [
+        "Obsługa maszyny czyszczącej do utrzymania nawierzchni serwisu.",
+        "Dbanie o porządek w strefie serwisowej zgodnie.",
+        "Wsparcie logistyczne wewnątrz serwisu i dbałość o infrastrukturę obiektu."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "Magazyn Materiałów Budowlanych (Holandia)",
+      "role": "Pracownik magazynowy",
+      "period": "07.2024 - 09.2024",
+      "tasks": [
+        "Sortowanie, pakowanie i transport komponentów zgodnie z instrukcjami technicznymi.",
+        "Obsługa skanera magazynowego oraz narzędzi ręcznych przy załadunku i rozładunku.",
+        "Komunikacja w zespole międzynarodowym w języku angielskim.",
+        "Przestrzeganie zasad BHP i utrzymywanie standardów organizacji stanowiska pracy."
+      ]
+    },
+
+    {
+      "category": "other",
+      "company": "Działania Marketingowe / Społeczne",
+      "role": "Promotor / Przedstawiciel terenowy",
+      "period": "Dorywczo (do 2024)",
+      "tasks": [
+        "Prowadzenie akcji informacyjnych i zbieranie podpisów pod petycjami w przestrzeni publicznej.",
+        "Praca w dynamicznym środowisku i bezpośredni kontakt z ludźmi w różnych warunkach.",
+        "Współpraca z koordynatorem i terminowe dostarczanie raportów z przeprowadzonych działań."
+      ]
     }
   ],
   "skills_groups": [
     {
       "name": "Backend & Core",
       "items": [
-        { "name": "Java", "details": "Tworzenie logiki biznesowej, Swing (GUI), wielowątkowość." },
+        {
+          "name": "Java",
+          "details": "Implementacja logiki biznesowej z użyciem Spring Boot (Data, Security). Biegłość w stosowaniu wzorców projektowych oraz zasad SOLID. Doświadczenie w programowaniu współbieżnym (Multithreading), obsłudze Streams API oraz asynchronicznej komunikacji z bazami danych.",   ",projects": ["traffic-sim", "blade-mount", "codibly-backend"]
+        },
         {
           "name": "C# / .NET",
-          "details": "ASP.NET Core 8, Entity Framework. Wykorzystany w systemie zarządzania serwisem samochodowym.",
-          "projects": ["car-service"]
+          "details": "Budowanie architektury REST API w .NET 8 i ASP.NET Core przy użyciu Entity Framework Core. Implementacja mechanik gier, systemów stanów (FSM) oraz optymalizacja wydajności w silniku Unity. Wykorzystanie Dependency Injection, Background Services oraz optymalizacja zapytań T-SQL.",
+          "projects": ["car-service", "joke-manager"]
         },
-        { "name": "C++", "details": "Programowanie obiektowe, Qt Framework (GUI), systemy fabryczne." },
-        { "name": "Python", "details": "Automatyzacja, analiza danych w środowisku Google Colab." },
-        { "name": "PHP", "details": "Podstawy tworzenia skryptów po stronie serwera." }
+        {
+          "name": "C++",
+          "details": "Programowanie systemowe pod środowisko Linux. Obsługa komunikacji międzyprocesowej (IPC) z wykorzystaniem semaforów POSIX, pamięci współdzielonej i sygnałów. Biegłość w niskopoziomowym zarządzaniu pamięcią poprzez wskaźniki, optymalizacja wydajnościowa systemów o wysokiej współbieżności.",
+          "projects": ["brick-factory", "joke-manager"]
+        },
+        {
+          "name": "Go",
+          "details": "Budowanie API, praca z MongoDB i przetwarzanie danych.",
+          "projects": ["swift-api"]
+        },
+        {
+          "name": "Python",
+          "details": "Implementacja niskopoziomowych algorytmów kryptograficznych (np. AES) oraz automatyzacja zadań systemowych. Doświadczenie w przeprowadzaniu symulacji i badań naukowych w obszarze AI/Machine Learning (m.in. algorytm KNN) w środowisku Google Colab",
+          "projects": ["aes-python"]
+        },
+        {
+          "name": "PHP",
+          "details": "Architektura MVC bez frameworków, obsługa baz PostgreSQL.",
+          "projects": ["opinio"]
+        }
       ]
     },
     {
       "name": "Web & Frontend",
       "items": [
-        { "name": "HTML5 / CSS3", "details": "Budowanie responsywnych struktur i layoutów stron." },
-        { "name": "JavaScript", "details": "Dodawanie interaktywności na stronach (DOM, Eventy)." },
+        {
+          "name": "JavaScript",
+          "details": "Vanilla JS (OOP), asynchroniczność i manipulacja DOM.",
+          "projects": ["pk-analizator", "opinio"]
+        },
+        { "name": "HTML5 / CSS3", "details": "Budowanie responsywnych struktur i nowoczesnych layoutów."
+        ,"projects": ["opinio"]},
         { "name": "Figma", "details": "Projektowanie interfejsów użytkownika (UI/UX) i prototypowanie." }
       ]
     },
     {
-      "name": "Game Dev & Scripting",
+      "name": "Game Dev",
       "items": [
-        { "name": "Unity", "details": "Tworzenie gier 2D/3D w języku C# (projekty semestralne)." },
-        { "name": "Roblox Studio", "details": "Zaawansowane skryptowanie w języku Lua, mechaniki gier." },
-        { "name": "Lua Tutor", "details": "Doświadczenie w nauczaniu programowania i logiki silnika Roblox." }
+        {
+          "name": "Unity",
+          "details": "Projektowanie i programowanie gier w silniku Unity w ramach współpracy zespołowej nad rozbudowaną grą strategiczną.  Zarządzanie assetami oraz praca z systemami fizyki i UI w środowisku 3D/2D.",
+          "projects": ["drone-smasher"]
+        },
+        { "name": "Roblox Studio", "details": "Tworzenie gier i rozbudowanych mechanik w środowisku Roblox Studio. Pisanie skryptów po stronie serwera i klienta, zarządzanie danymi graczy oraz projektowanie interaktywnych systemów rozgrywki." },
+        { "name": "Lua Tutor", "details": "Prowadzenie zajęć z zakresu inżynierii gier i logiki programowania w środowisku Roblox Studio. Przekazywanie wiedzy na temat skryptowania (Lua) oraz projektowania mechanik rozgrywki." }
       ]
     },
     {
-      "name": "Infrastruktura i Sieci",
+      "name": "Infrastruktura i Bazy",
       "items": [
-        { "name": "Docker", "details": "Konteneryzacja aplikacji i zarządzanie środowiskami." },
-        { "name": "Git", "details": "Zaawansowana kontrola wersji, praca na gałęziach (branches)." },
-        { "name": "Packet Tracer", "details": "Projektowanie i symulacja sieci komputerowych (Cisco)." },
-        { "name": "Linux", "details": "Praca w terminalu, zarządzanie procesami i plikami." }
+        {
+          "name": "Docker",
+          "details": "Konteneryzacja aplikacji w celu zapewnienia spójności środowisk deweloperskich i produkcyjnych. Tworzenie plików Dockerfile oraz zarządzanie wielokontenerowymi strukturami przy użyciu Docker Compose. Doświadczenie w izolowaniu usług backendowych, baz danych i serwerów proxy.",
+          "projects": ["opinio"]
+        },
+        {
+          "name": "Bazy Danych",
+          "details": "Projektowanie i optymalizacja relacyjnych baz danych (MS SQL Server, PostgreSQL) oraz rozwiązań NoSQL (MongoDB). Implementacja zasad normalizacji, tworzenie triggerów, pisanie zapytań, procedur, funckji, widoków oraz obsługa transakcji zapewniających spójność danych (ACID). ",
+          "projects": ["car-service", "swift-api", "opinio"]
+        },
+        { "name": "Git", "details": "Zarządzanie kodem w systemie Git w ramach współpracy zespołowej. Automatyzacja procesów z wykorzystaniem GitHub Actions. Doświadczenie w hostowaniu projektów i zarządzaniu statycznymi stronami za pomocą usługi GitHub Pages."},
+        { "name": "Linux", "details": "Praca w środowisku systemowym z wykorzystaniem wiersza poleceń (CLI). Zarządzanie systemem plików, procesami oraz uprawnieniami użytkowników. Doświadczenie automatyzacji zadań za pomocą skryptów powłoki (Bash).", "projects": ["brick-factory"] }
       ]
     },
     {
-      "name": "Grafika i Inżynieria 3D",
+      "name": "Grafika/Multimedia/Pakiet Office",
       "items": [
-        { "name": "AutoCAD", "details": "Tworzenie precyzyjnej dokumentacji technicznej i rysunków 2D." },
-        { "name": "3ds Max", "details": "Modelowanie obiektów 3D i podstawy wizualizacji." },
-        { "name": "DaVinci Resolve", "details": "Montaż wideo i postprodukcja." },
-        { "name": "Photopea", "details": "Obróbka grafiki rastrowej (alternatywa dla Photoshopa)." }
-      ]
-    },
-    {
-      "name": "Narzędzia Biurowe",
-      "items": [
-        { "name": "Excel / Word", "details": "Praca z arkuszami kalkulacyjnymi (formuły, raporty) i dokumentacją." }
+        { "name": "AutoCAD", "details": "Tworzenie dokumentacji technicznej i rysunków 2D." },
+        { "name": "3ds Max", "details": "Modelowanie obiektów 3D i podstawy wizualizacji oraz animacji." },
+        { "name": "Photopea", "details": "Obróbka grafiki rastrowej (UI assets).", "projects": ["drone-smasher"] },
+        { "name": "DaVinci Resolve", "details": "Montaż materiałów wideo, korekcja barwna oraz postprodukcja", "projects": ["drone-smasher"] },
+        { "name": "Excel/Word", "details": "Praca z arkuszami kalkulacyjnymi Microsoft Excel z wykorzystaniem formuł, tabel przestawnych oraz narzędzi do wizualizacji danych. Tworzenie ustrukturyzowanej dokumentacji technicznej i raportów w programie Microsoft Word." }
       ]
     }
   ]

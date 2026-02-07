@@ -7,7 +7,8 @@
     "github_username": "Mciesielczyk",
     "email": "michaelciesielczyk12@gmail.com",
     "phone": "+48 534 830 654",
-    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/"
+    "linkedin": "https://www.linkedin.com/in/micha%C5%82-ciesielczyk-a36022330/",
+    "city": "Cracow"
   },
 
   "about": {
@@ -17,21 +18,62 @@
   "experience": [
     {
       "category": "it",
-      "company": "Prywatny Tutor / Szkoła Programowania",
-      "role": "Tutor Programowania (Lua)",
-      "period": "2023 - obecnie",
+      "company": "Private Tutor / Programming School",
+      "role": "Programming Tutor (Lua)",
+      "period": "07.2025 - Present",
       "tasks": [
-        "Nauka podstaw algorytmiki i struktur danych z wykorzystaniem języka Lua.",
-        "Debugowanie kodu i pomoc w rozwiązywaniu problemów logicznych.",
-        "Przygotowywanie materiałów dydaktycznych i prostych silników gier."
+        "Teaching game development, fundamental algorithms, and programming logic to children (ages 8-13) using Lua.",
+        "Developing original educational materials and comprehensive lesson plans.",
+        "Collaborating within an international team to ensure high-quality educational standards.",
+        "Managing communication between students, parents, and the company to monitor progress and ensure satisfaction.",
+        "Assisting students with code debugging, problem-solving, and the implementation of their own projects.",
+        "Maintaining administrative order and ensuring all educational goals are met according to company standards."
       ]
     },
     {
       "category": "other",
-      "company": "Firma X",
-      "role": "Poprzednie Stanowisko",
-      "period": "2021 - 2022",
-      "tasks": ["Obsługa klienta", "Zarządzanie czasem"]
+      "company": "British American Tobacco (BAT)",
+      "role": "Brand Ambassador / Promoter",
+      "period": "07.2025 - 11.2025",
+      "tasks": [
+        "Direct customer engagement, product presentation, and distribution of promotional materials.",
+        "Executing sales and promotional targets in accordance with company strategy.",
+        "Building positive brand image and reporting performance results."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "BMW Service Center",
+      "role": "Technical Support & Facility Maintenance Worker",
+      "period": "06.2025 - 09.2025",
+      "tasks": [
+        "Operating floor cleaning machinery to maintain the service area surface.",
+        "Ensuring order and cleanliness within the service zone according to facility standards.",
+        "Providing logistical support and maintaining facility infrastructure."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "Construction Materials Warehouse (Netherlands)",
+      "role": "Warehouse Worker (Netherlands)",
+      "period": "07.2024 - 09.2024",
+      "tasks": [
+        "Sorting, packing, and transporting components according to technical instructions.",
+        "Operating warehouse scanners and manual tools during loading and unloading.",
+        "Communicating within a multinational team in English.",
+        "Adhering to Health and Safety (BHP) regulations and maintaining workplace organization standards."
+      ]
+    },
+    {
+      "category": "other",
+      "company": "Marketing & Social Campaigns",
+      "role": "Promoter / Field Representative",
+      "period": "Freelance / Occasional (until 2024)",
+      "tasks": [
+        "Conducting informational campaigns and collecting signatures for public petitions.",
+        "Working in a dynamic environment with direct public contact under various conditions.",
+        "Collaborating with coordinators and providing timely reports on activities."
+      ]
     }
   ],
   "skills_groups": [

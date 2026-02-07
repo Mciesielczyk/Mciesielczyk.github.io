@@ -102,9 +102,7 @@ export const showProjectDetails = (title, description, link, tech, lang) => {
     myModal.show();
 };
 
-// Pamiętaj o eksporcie do window
-window.showProjectDetails = showProjectDetails;
-// Pamiętaj o eksporcie i przypisaniu do window w script.js!
+
 window.showProjectDetails = showProjectDetails;
 
 // Rejestracja globalna

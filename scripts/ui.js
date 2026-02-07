@@ -9,8 +9,10 @@ export const renderProfile = (config, lang) => {
     const contactData = [
         { label: 'Email', value: config.profile.email, href: `mailto:${config.profile.email}` },
         { label: lang === 'pl' ? 'Tel' : 'Phone', value: config.profile.phone, href: `tel:${config.profile.phone.replace(/\s/g, '')}` },
-        { label: 'In', value: `${config.profile.name} ${config.profile.surname}`, href: config.profile.linkedin },
-        { label: 'Git', value: config.profile.github_username, href: `https://github.com/${config.profile.github_username}` }
+        { label: 'Linkedin', value: `${config.profile.name} ${config.profile.surname}`, href: config.profile.linkedin },
+        { label: 'GitHub', value: config.profile.github_username, href: `https://github.com/${config.profile.github_username}` },
+        {label: lang === 'pl' ? 'Miasto' : 'City', value: config.profile.city}
+
     ];
 
     contactData.forEach(item => {

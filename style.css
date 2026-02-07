@@ -144,3 +144,47 @@ header {
 .card {
     transition: all 0.5s ease !important;
 }
+
+html { scroll-behavior: smooth; }
+
+.side-map {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #888;
+    transition: 0.3s;
+    justify-content: flex-end;
+}
+
+.nav-line {
+    width: 0px;
+    height: 1px;
+    background: currentColor;
+    transition: 0.3s;
+    margin-right: 0;
+}
+
+.nav-item.active {
+    color: #3e3636; /* Kolor aktywnego numerka */
+}
+
+.nav-item.active .nav-line {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.nav-num {
+    font-family: monospace;
+    font-size: 12px;
+}
