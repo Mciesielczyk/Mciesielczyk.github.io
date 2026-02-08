@@ -28,54 +28,64 @@
     </a>
 </nav>
 
-<div class="container text-end mt-3">
-    <button id="lang-btn" class="btn btn-lang">EN</button>
+<div class="settings-toolbar">
+    <button id="lang-btn" class="btn-toolbar">EN</button>
+    <div class="divider"></div>
+    <div class="theme-dropdown">
+        <button id="theme-btn" class="btn-toolbar">
+            <span id="current-theme-icon">🍦</span>
+        </button>
+        <div class="theme-menu">
+            <div class="theme-option" data-theme="theme-creamy"><span>🍦</span> Creamy</div>
+            <div class="theme-option" data-theme="theme-nordic"><span>❄️</span> Nordic</div>
+            <div class="theme-option" data-theme="theme-sand"><span>🏜️</span> Sand</div>
+            <div class="theme-option" data-theme="theme-cyber"><span>⚪</span> Cyber</div>
+            <div class="theme-option" data-theme="theme-slate"><span>🌑</span> Dark Mode</div>
+        </div>
+    </div>
 </div>
 
 <div class="container">
     <header class="text-center py-5">
         <img id="profile-avatar" src="" alt="Awatar" class="avatar-img mb-3">
-        <h1 class="display-4 fw-bold"><span data-i18n="greeting">Cześć, jestem</span> <span id="header-name" style="color: #00d4ff;">...</span></h1>
+        <h1 class="display-4 fw-bold">
+            <span data-i18n="greeting">Cześć, jestem</span>
+            <span id="header-name">...</span>
+        </h1>
         <p id="header-role" class="lead text-secondary">...</p>
     </header>
 
     <section id="about" class="mb-5 text-center">
         <h2 class="fw-bold mb-4" data-i18n="about-title">O mnie</h2>
-        <p id="about-description" class="mx-auto" style="max-width: 700px; line-height: 1.7;">...</p>
+        <p id="about-description" class="mx-auto">...</p>
     </section>
 
-    <section id="skills" class="py-5 mb-5 rounded-4 shadow-sm" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);">
+    <section id="skills" class="py-5 mb-5 rounded-4 shadow-sm">
         <div class="container text-center">
             <h2 class="fw-bold mb-5" data-i18n="skills-title">Stack Technologiczny</h2>
-            <div id="skills-container" class="d-flex flex-wrap justify-content-center gap-4">
-            </div>
+            <div id="skills-container" class="d-flex flex-wrap justify-content-center gap-4"></div>
         </div>
     </section>
 
     <section id="projects" class="py-5">
         <h2 class="mb-5 fw-bold text-center" data-i18n="projects-title">Wybrane projekty</h2>
-        <div id="projects-container" class="row g-4">
-        </div>
+        <div id="projects-container" class="row g-4"></div>
     </section>
 
     <section id="experience" class="mb-5 py-5">
         <h2 class="fw-bold text-center mb-5" data-i18n="experience-title">Doświadczenia</h2>
-
-        <div id="experience-list-it" class="mx-auto" style="max-width: 800px;"></div>
-
+        <div id="experience-list-it" class="mx-auto"></div>
         <div class="text-center mt-4">
             <button id="toggle-other-exp" class="btn btn-outline-secondary btn-sm" data-i18n="toggle-exp">
                 Pokaż inne doświadczenia
             </button>
         </div>
-
-        <div id="experience-list-other" class="mx-auto mt-3 collapse" style="max-width: 800px;"></div>
+        <div id="experience-list-other" class="mx-auto mt-3 collapse"></div>
     </section>
 
     <footer id="contact" class="py-5 border-top border-secondary mt-5">
         <div class="container text-center">
             <h2 class="fw-bold mb-5" data-i18n="contact-title">Kontakt</h2>
-
             <div class="contact-details">
                 <div id="contact-email"></div>
                 <div id="contact-phone"></div>
@@ -89,13 +99,12 @@
 
 <div class="modal fade" id="skillModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-white border-info" style="border: 2px solid #00d4ff;">
-            <div class="modal-header border-secondary">
+        <div class="modal-content">
+            <div class="modal-header">
                 <h5 class="modal-title" id="skillModalTitle">Szczegóły</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="skillModalBody" style="font-size: 1.1rem; opacity: 0.9;">
-            </div>
+            <div class="modal-body" id="skillModalBody"></div>
         </div>
     </div>
 </div>

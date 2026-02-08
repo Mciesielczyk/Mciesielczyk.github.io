@@ -130,6 +130,22 @@
       "items": [
         { "name": "Excel / Word", "details": "Advanced spreadsheet operations (formulas, reports) and documentation." }
       ]
+    },
+
+    {
+      "name": "Languages",
+      "items": [
+        {
+          "name": "English",
+          "details": "(C1 Level) Language developed since early school years, used in professional work in the Netherlands and during a language course in the UK. Fluent in spoken and written communication, including working with technical documentation and IT terminology."
+        },
+        {
+          "name": "Polish",
+          "details": "Native"
+        }
+      ]
+
     }
+
   ]
 }

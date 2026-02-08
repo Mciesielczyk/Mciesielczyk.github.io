@@ -34,21 +34,24 @@ export const renderSkills = (skillsGroups) => {
     const container = document.getElementById('skills-container');
     container.innerHTML = '';
     skillsGroups.forEach(group => {
-        let groupHtml = `<div class="mb-4">
-            <h6 class="skill-group-title mb-2 text-center text-secondary opacity-75">${group.name}</h6>
-            <div class="d-flex flex-wrap justify-content-center gap-2">`;
+        let groupHtml = `
+            <div class="skill-group-box">
+                <h6 class="skill-group-title">${group.name}</h6>
+                <div class="skills-wrapper">`; // Tu będą skille
 
-        group.items.forEach(skill => {
+        group.items.forEach((skill, index) => {
             const safeDetails = encodeURIComponent(skill.details);
-            // Przekształcamy tablicę projektów w stringa, jeśli istnieje
             const projectsList = skill.projects ? JSON.stringify(skill.projects) : "[]";
 
+            // Dodajemy inline style z opóźnieniem animacji, żeby każdy ruszał się inaczej
+            const delay = (index * 0.2).toFixed(1);
+
             groupHtml += `
-        <span class="badge skill-badge" 
-              onclick='showSkillDetails("${skill.name}", decodeURIComponent("${safeDetails}"), ${projectsList})' 
-              style="cursor: pointer;">
-              ${skill.name}
-        </span>`;
+                <span class="badge skill-badge floating-skill" 
+                      style="animation-delay: ${delay}s; cursor: pointer;"
+                      onclick='showSkillDetails("${skill.name}", decodeURIComponent("${safeDetails}"), ${projectsList})'>
+                      ${skill.name}
+                </span>`;
         });
         groupHtml += `</div></div>`;
         container.innerHTML += groupHtml;
@@ -65,16 +68,15 @@ export const renderExperience = (experience, lang) => {
 
     const itJobs = experience.filter(e => e.category === 'it');
     const otherJobs = experience.filter(e => e.category === 'other');
-
     const cardTemplate = (exp) => `
-        <div class="card p-4 mb-3 border-secondary">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h4 style="color: #00d4ff;" class="mb-0">${exp.role}</h4>
-                <span class="badge bg-secondary">${exp.period}</span>
-            </div>
-            <h5 class="mb-2 text-white-50">${exp.company}</h5>
-            <ul class="opacity-75 mb-0">${exp.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
-        </div>`;
+    <div class="card p-4 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h4 class="experience-role mb-0">${exp.role}</h4>
+            <span class="badge experience-period">${exp.period}</span>
+        </div>
+        <h5 class="experience-company mb-2">${exp.company}</h5>
+        <ul class="experience-tasks mb-0">${exp.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+    </div>`;
 
     itJobs.forEach(job => itContainer.innerHTML += cardTemplate(job));
     otherJobs.forEach(job => otherContainer.innerHTML += cardTemplate(job));
@@ -92,8 +94,8 @@ export const renderProjects = (projects, lang) => {
     container.innerHTML = '';
 
     projects.forEach(project => {
-        const techBadges = project.tech.map(t => `<span class="badge badge-tech me-1">${t}</span>`).join('');
-
+// Zmieniamy na czystą klasę, którą ostylujemy w CSS
+        const techBadges = project.tech.map(t => `<span class="badge tech-badge">${t}</span>`).join('');
         const safeDesc = encodeURIComponent(project.description);
         const safeTech = encodeURIComponent(project.tech.join(', '));
         const safeTitle = encodeURIComponent(project.title);

@@ -121,6 +121,48 @@ const handleScrollSpy = () => {
     });
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('theme-btn');
+    const themeMenu = document.querySelector('.theme-menu');
+    const themeOptions = document.querySelectorAll('.theme-option');
+    const currentThemeIcon = document.getElementById('current-theme-icon');
+    const body = document.body;
+
+    // 1. Otwieranie/Zamykanie menu po kliknięciu w przycisk
+    themeBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Zapobiega natychmiastowemu zamknięciu przez listener na window
+        themeMenu.classList.toggle('show');
+    });
+
+    // 2. Wybór motywu i zamykanie menu
+    themeOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const theme = option.getAttribute('data-theme');
+            const icon = option.querySelector('span').textContent;
+
+            body.className = theme;
+            currentThemeIcon.textContent = icon;
+            localStorage.setItem('selectedTheme', theme);
+
+            themeMenu.classList.remove('show'); // Zamknij po wyborze
+        });
+    });
+
+    // 3. Zamykanie menu, gdy klikniesz poza pasek narzędzi
+    window.addEventListener('click', () => {
+        if (themeMenu.classList.contains('show')) {
+            themeMenu.classList.remove('show');
+        }
+    });
+
+    // Inicjalizacja zapisanego motywu (to już masz, ale upewnij się, że jest)
+    const savedTheme = localStorage.getItem('selectedTheme') || 'theme-creamy';
+    body.className = savedTheme;
+    const activeOption = document.querySelector(`[data-theme="${savedTheme}"]`);
+    if(activeOption) currentThemeIcon.textContent = activeOption.querySelector('span').textContent;
+});
+
+
 // Listenery
 window.addEventListener('scroll', handleScrollSpy);
 window.addEventListener('resize', handleScrollSpy); // Dodatkowo przy zmianie wielkości okna

@@ -2,7 +2,7 @@
   "profile": {
     "name": "Michał",
     "surname": "Ciesielczyk",
-    "avatars": ["images/avatar1.jpg", "images/avatar2.jpg"],
+    "avatars": ["images/avatar1.jpg", "images/avatar2.jpg","images/avatar3.jpg"],
     "role": "Student 3 roku Informatyki na PK | Tutor w firmie Kodland",
     "github_username": "Mciesielczyk",
     "email": "michaelciesielczyk12@gmail.com",
@@ -25,7 +25,7 @@
         "Współpraca w międzynarodowym zespole w celu zapewnienia wysokiej jakości usług edukacyjnych.",
         "Zarządzanie komunikacją na linii uczeń-rodzic-firma oraz dbanie o satysfakcję i postępy podopiecznych.",
         "Pomoc uczniom w debugowaniu kodu, rozwiązywaniu problemów i realizacji własnych projektów.",
-        "Dbanie o porządek administracyjny i realizację celów dydaktycznych zgodnie ze standardami firmy."
+        "Danie o porządek administracyjny i realizację celów dydaktycznych zgodnie ze standardami firmy."
       ]
     },
     {
@@ -161,6 +161,15 @@
         { "name": "DaVinci Resolve", "details": "Montaż materiałów wideo, korekcja barwna oraz postprodukcja", "projects": ["drone-smasher"] },
         { "name": "Excel/Word", "details": "Praca z arkuszami kalkulacyjnymi Microsoft Excel z wykorzystaniem formuł, tabel przestawnych oraz narzędzi do wizualizacji danych. Tworzenie ustrukturyzowanej dokumentacji technicznej i raportów w programie Microsoft Word." }
       ]
+    },
+
+    {
+      "name": "Języki",
+      "items": [
+        {"name": "Angielski", "details": "(Poziom C1) Język rozwijany od wczesnych lat szkolnych, używany w pracy w Holandii oraz podczas kursu w szkole językowej w Anglii. Swobodna komunikacja w mowie i piśmie, w tym praca z dokumentacją techniczną i terminologią IT." },
+        {"name" :  "Polski", "details":  "Ojczysty"}
+      ]
     }
+
   ]
 }

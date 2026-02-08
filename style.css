@@ -1,151 +1,196 @@
-/* --- TŁO Z EFEKTEM GŁĘBI --- */
+/* --- ZMIENNE I MOTYWY --- */
+:root {
+    --bg-color: #f8d6bb;
+    --card-bg: #dddbdb;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --accent-color: #2c2828;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --toolbar-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* ❄️ NORDIC - Zimny, techniczny, profesjonalny */
+body.theme-nordic {
+    --bg-color: #eef2f7; /* Jasna baza */
+    --bg-gradient-1: rgb(9, 132, 227); /* Niebieski Dodger */
+    --bg-gradient-2: rgb(116, 185, 255); /* Jasny niebieski Sky */
+    --bg-gradient-3: rgb(116, 239, 239); /* Turkusowy morski */
+    --accent-color: #0984e3;
+    --card-bg: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --border-color: rgba(9, 132, 227, 0.1);
+    --shadow: 0 10px 30px rgba(9, 132, 227, 0.08);
+}
+
+
+/* 🏜️ SAND - Pustynny, nowoczesny, odważny */
+body.theme-sand {
+    --bg-color: #f1e4d3;
+    --card-bg: #fffdfa;
+    --text-main: #5d4037;
+    --text-muted: #8d6e63;
+    --accent-color: #e67e22; /* Pomarańczowy/Terakota */
+    --border-color: rgba(230, 126, 34, 0.2);
+    --shadow: 0 10px 30px rgba(139, 69, 19, 0.15);
+}
+
+/* ⚪ CYBER - Sterylny, high-tech, minimalistyczny */
+body.theme-cyber {
+    --bg-color: #ffffff;
+    --card-bg: #99b4d3;
+    --text-main: #1a1a1a;
+    --text-muted: #535d5e;
+    --accent-color: #00d4ff; /* Jaskrawy błękit */
+    --border-color: #e1e1e1;
+    --shadow: 0 4px 0px rgba(0, 0, 0, 0.05); /* Płaski, "kartonowy" cień */
+}
+
+body.theme-slate {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #eae7e7;
+    --text-muted: #94a3b8;
+    --accent-color: #4cdeff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    --toolbar-bg: rgba(30, 41, 59, 0.8);
+}
+
+/* --- OGÓLNE --- */
+html { scroll-behavior: smooth; }
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #2d3436;
+    color: var(--text-main);
     margin: 0;
     padding: 0;
-    /* Ciekawe tło: gradient z delikatnym szumem lub poświatą */
-    background:
-            radial-gradient(circle at 0% 0%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-            radial-gradient(circle at 100% 100%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-            #ffffff;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
     background-attachment: fixed;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* --- NAGŁÓWEK --- */
+/* --- NAGŁÓWEK I AWATAR --- */
 header {
     text-align: center;
     padding: 80px 0;
-    /* Gradient linearny dla odcięcia góry */
     background: linear-gradient(180deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* --- AWATAR --- */
 .avatar-img {
-    width: 170px;
-    height: 170px;
+    width: 200px; height: 200px;
     object-fit: cover;
-    border-radius: 30px; /* Nowoczesny "squircle" zamiast koła */
-    border: 5px solid white;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border: 5px solid var(--card-bg);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
-.avatar-img:hover {
-    transform: translateY(-5px) rotate(2deg);
-}
-
-/* --- SKILLE (GLASSMORPHISM LIGHT) --- */
-.skill-group-box {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 25px;
+/* --- KARTY I GRUPY (Używamy zmiennych!) --- */
+.skill-group-box, .card {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow) !important;
     border-radius: 20px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    padding: 25px;
+    transition: all 0.4s ease !important;
+
 }
 
-.skill-badge {
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: inline-block;
-    background: #f1f2f6 !important;
-    color: #2d3436 !important;
-    border: 1px solid #dfe4ea !important;
-    padding: 8px 16px !important;
-    margin: 4px;
-    border-radius: 12px !important;
-    font-weight: 600;
-}
-
-.skill-badge:hover {
-    background: #00d4ff !important;
-    color: white !important;
-    border-color: #00d4ff !important;
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
-}
-
-/* --- KARTY PROJEKTÓW --- */
-.card {
-    background: white !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    border-radius: 20px !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04) !important;
-    transition: all 0.3s ease !important;
+.contact-details {
+    display: grid;
+    /* Tworzy kolumny, które dopasowują się do szerokości (min 250px) */
+    gap: 10px; /* To jest kluczowa przerwa między obwódkami! */
+    background-color: var(--card-bg) !important;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color) !important;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
-    border-color: #00d4ff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* --- KONTAKT (ESTETYCZNA LISTA) --- */
-.contact-details {
-    background: white;
-    padding: 30px;
-    border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+
+/* --- SKILL BADGES --- */
+.skill-badge {
+    background: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 8px 16px !important;
+    margin: 4px;
+    border-radius: 12px !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
-.contact-item {
+.skill-badge:hover {
+    background: var(--accent-color) !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+/* --- TOOLBAR I MENU --- */
+.settings-toolbar {
+    position: fixed; top: 20px; right: 30px;
+    background: var(--toolbar-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    display: flex; align-items: center;
+    padding: 5px; z-index: 10000;
+}
+
+.btn-toolbar {
+    background: transparent; border: none;
+    padding: 8px 15px; font-weight: 700;
+    color: var(--text-main); cursor: pointer;
+}
+
+.theme-menu {
+    position: absolute; top: calc(100% + 10px); right: 0;
+    background: var(--card-bg);
+    color: var(--text-main);
+    border-radius: 12px; border: 1px solid var(--border-color);
+    padding: 8px; min-width: 150px;
+    display: none; flex-direction: column; gap: 4px;
+    z-index: 10001;
+}
+
+.theme-menu.show { display: flex; opacity: 1; transform: translateY(0); }
+
+.theme-option:hover {
+    background: var(--bg-color);
+    border-radius: 8px;
+}
+
+/* --- SIDE MAP --- */
+.nav-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    background: #f8f9fa;
+    text-decoration: none !important; /* To usuwa podkreślenie */
+    color: var(--text-muted);
+    transition: 0.3s;
+    justify-content: flex-end;
+}
+.nav-item.active { color: var(--accent-color); }
+.nav-line { background: currentColor; }
+
+/* --- KONTAKT --- */
+.contact-item {
+    background: var(--bg-color);
     border-radius: 15px;
-    transition: background 0.3s ease;
-    text-decoration: none !important;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+
 }
-
-.contact-item:hover {
-    background: rgba(0, 212, 255, 0.1);
-}
-
-.contact-label {
-    color: #00d4ff;
-    font-weight: 800;
-    width: 90px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.contact-value, .contact-value a {
-    color: #2d3436 !important;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-/* --- PRZYCISK JĘZYKA --- */
-.btn-lang {
-    background: #2d3436;
-    color: white;
-    border-radius: 12px;
-    padding: 8px 20px;
-    font-weight: bold;
-    border: none;
-}
-
-
-
-.project-highlight {
-    border: 2px solid #00d4ff !important;
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6) !important;
-    transform: scale(1.03);
-    transition: all 0.5s ease;
-}
-
-/* Dodaj to do zwykłej klasy .card, żeby powrót z podświetlenia był płynny */
-.card {
-    transition: all 0.5s ease !important;
-}
-
-html { scroll-behavior: smooth; }
+.contact-label { color: var(--accent-color); }
 
 .side-map {
     position: fixed;
@@ -158,33 +203,145 @@ html { scroll-behavior: smooth; }
     z-index: 9999;
 }
 
-.nav-item {
+/* Kolor imienia w nagłówku */
+#header-name {
+    color: var(--accent-color);
+}
+
+/* Wygląd sekcji Skills (zastępuje to, co było w style="") */
+#skills {
+    background-color: var(--card-bg) !important; /* Lub rgba(255,255,255,0.02) jeśli wolisz przezroczystość */
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Opis "O mnie" (zastępuje max-width i line-height) */
+#about-description {
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+/* Doświadczenie (zastępuje max-width) */
+#experience-list-it, #experience-list-other {
+    max-width: 800px;
+}
+
+/* MODAL - Teraz będzie reagował na motyw */
+.modal-content {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+    border: 2px solid var(--accent-color) !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Przycisk zamknięcia modala (dla ciemnych motywów) */
+body.theme-slate .btn-close {
+    filter: invert(1);
+}
+
+/* Kolor stanowiska w doświadczeniu */
+.experience-role {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Kolor firmy - musi być czytelny w każdym motywie */
+.experience-company {
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+/* Badge z okresem pracy */
+.experience-period {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+}
+
+
+
+/* Badge technologii w projektach */
+.tech-badge {
+    background-color: var(--bg-color) !important;
+    color:  var(--accent-color) !important;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    margin-right: 6px; /* Odstęp z prawej */
+    margin-bottom: 6px; /* Odstęp z dołu, gdyby przeskoczyły do nowej linii */
+    display: inline-block; /* Ważne, żeby marginesy działały poprawnie */
+}
+
+/* Styl listy zadań w doświadczeniu */
+.experience-tasks {
+    color: var(--text-muted);
+}
+
+
+
+
+/* Kontener całej grupy */
+.skill-group-box {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    min-width: 300px;
+    flex: 1;
+}
+
+/* Tytuł grupy na środku */
+.skill-group-title {
+    color: var(--text-main);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Kontener na skille rozłożone wokół */
+.skills-wrapper {
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #888;
-    transition: 0.3s;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    perspective: 1000px; /* Dodaje lekką głębię */
 }
 
-.nav-line {
-    width: 0px;
-    height: 1px;
-    background: currentColor;
-    transition: 0.3s;
-    margin-right: 0;
+/* Sam badge skilla */
+.floating-skill {
+    background-color: var(--bg-color) !important;
+    color: var(--accent-color) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 10px 18px !important;
+    border-radius: 12px !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+
+    /* Animacja lewitacji */
+    animation: floatingEffect 4s ease-in-out infinite alternate;
+    transition: all 0.3s ease;
 }
 
-.nav-item.active {
-    color: #3e3636; /* Kolor aktywnego numerka */
+.floating-skill:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    transform: scale(1.1) translateY(-5px) !important;
+    animation-play-state: paused; /* Zatrzymuje pływanie przy najechaniu */
 }
 
-.nav-item.active .nav-line {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.nav-num {
-    font-family: monospace;
-    font-size: 12px;
+/* Definicja ruchu góra-dół */
+@keyframes floatingEffect {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    100% {
+        transform: translateY(-8px); /* Przesunięcie o 8 pikseli w górę */
+        box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
 }
