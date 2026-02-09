@@ -80,72 +80,121 @@
     {
       "name": "Backend & Core",
       "items": [
-        { "name": "Java", "details": "Business logic development, Swing (GUI), multithreading." },
+        {
+          "name": "Java",
+          "details": "Implementation of business logic using Spring Boot (Data, Security). Proficiency in design patterns and SOLID principles. Experience in concurrent programming (Multithreading), Streams API, and asynchronous database communication.",
+          "projects": ["traffic-sim", "blade-mount", "codibly-backend"]
+        },
         {
           "name": "C# / .NET",
-          "details": "ASP.NET Core 8, Entity Framework. Implemented in the car service management system.",
-          "projects": ["car-service"]
+          "details": "Building REST API architectures in .NET 8 and ASP.NET Core using Entity Framework Core. Implementation of game mechanics, Finite State Machines (FSM), and performance optimization in Unity. Utilizing Dependency Injection, Background Services, and T-SQL query optimization.",
+          "projects": ["car-service", "joke-manager"]
         },
-        { "name": "C++", "details": "Object-oriented programming, Qt Framework (GUI), factory systems." },
-        { "name": "Python", "details": "Automation, data analysis within Google Colab environment." },
-        { "name": "PHP", "details": "Foundations of server-side scripting." }
+        {
+          "name": "C++",
+          "details": "System programming for Linux environments. Handling Inter-Process Communication (IPC) using POSIX semaphores, shared memory, and signals. Proficiency in low-level memory management via pointers and performance optimization of high-concurrency systems.",
+          "projects": ["brick-factory", "joke-manager"]
+        },
+        {
+          "name": "Go",
+          "details": "Building APIs, working with MongoDB, and high-performance data processing.",
+          "projects": ["swift-api"]
+        },
+        {
+          "name": "Python",
+          "details": "Implementation of low-level cryptographic algorithms (e.g., AES) and system task automation. Experience in conducting simulations and research in AI/Machine Learning (including the KNN algorithm) within Google Colab environments.",
+          "projects": ["aes-python"]
+        },
+        {
+          "name": "PHP",
+          "details": "MVC architecture without external frameworks, handling PostgreSQL databases.",
+          "projects": ["opinio"]
+        }
       ]
     },
     {
       "name": "Web & Frontend",
       "items": [
-        { "name": "HTML5 / CSS3", "details": "Building responsive structures and web layouts." },
-        { "name": "JavaScript", "details": "Enhancing website interactivity (DOM, Events)." },
-        { "name": "Figma", "details": "User interface design (UI/UX) and prototyping." }
+        {
+          "name": "JavaScript",
+          "details": "Vanilla JS (OOP), asynchronous programming, and DOM manipulation.",
+          "projects": ["pk-analizator", "opinio"]
+        },
+        {
+          "name": "HTML5 / CSS3",
+          "details": "Building responsive structures and modern web layouts.",
+          "projects": ["opinio"]
+        },
+        {
+          "name": "Figma",
+          "details": "User interface (UI/UX) design and interactive prototyping."
+        }
       ]
     },
     {
-      "name": "Game Dev & Scripting",
+      "name": "Game Dev",
       "items": [
-        { "name": "Unity", "details": "2D/3D game development in C# (semester projects)." },
-        { "name": "Roblox Studio", "details": "Advanced scripting in Lua, game mechanics design." },
-        { "name": "Lua Tutor", "details": "Experience in teaching programming and Roblox engine logic." }
+        {
+          "name": "Unity",
+          "details": "Designing and programming games in Unity within a team environment for complex strategy projects. Asset management and working with physics systems and UI in 3D/2D environments.",
+          "projects": ["drone-smasher"]
+        },
+        {
+          "name": "Roblox Studio",
+          "details": "Creating games and complex mechanics in the Roblox Studio environment. Writing server-side and client-side scripts, managing player data, and designing interactive gameplay systems."
+        },
+        {
+          "name": "Lua Tutor",
+          "details": "Conducting classes on game engineering and programming logic in Roblox Studio. Sharing knowledge on scripting (Lua) and gameplay mechanics design."
+        }
       ]
     },
     {
-      "name": "Infrastructure & Networking",
+      "name": "Infrastructure & Databases",
       "items": [
-        { "name": "Docker", "details": "Application containerization and environment management." },
-        { "name": "Git", "details": "Advanced version control, branching strategies." },
-        { "name": "Packet Tracer", "details": "Design and simulation of computer networks (Cisco)." },
-        { "name": "Linux", "details": "Terminal operations, process and file management." }
+        {
+          "name": "Docker",
+          "details": "Containerization of applications to ensure consistency between development and production environments. Creating Dockerfiles and managing multi-container structures using Docker Compose. Experience in isolating backend services, databases, and proxy servers.",
+          "projects": ["opinio"]
+        },
+        {
+          "name": "Databases",
+          "details": "Designing and optimizing relational databases (MS SQL Server, PostgreSQL) and NoSQL solutions (MongoDB). Implementation of normalization rules, creating triggers, writing queries, procedures, functions, and views, as well as handling ACID-compliant transactions.",
+          "projects": ["car-service", "swift-api", "opinio"]
+        },
+        {
+          "name": "Git",
+          "details": "Code management using Git in collaborative team environments. Process automation using GitHub Actions. Experience in hosting projects and managing static sites via GitHub Pages."
+        },
+        {
+          "name": "Linux",
+          "details": "System-level work using the Command Line Interface (CLI). Managing file systems, processes, and user permissions. Experience in task automation using shell scripts (Bash).",
+          "projects": ["brick-factory"]
+        }
       ]
     },
     {
-      "name": "Graphics & 3D Engineering",
+      "name": "Graphics, Multimedia & Office",
       "items": [
-        { "name": "AutoCAD", "details": "Creating precise technical documentation and 2D drawings." },
-        { "name": "3ds Max", "details": "3D object modeling and visualization basics." },
-        { "name": "DaVinci Resolve", "details": "Video editing and post-production." },
-        { "name": "Photopea", "details": "Raster graphics processing (Photoshop alternative)." }
+        { "name": "AutoCAD", "details": "Creating technical documentation and 2D engineering drawings." },
+        { "name": "3ds Max", "details": "3D object modeling and fundamentals of visualization and animation." },
+        { "name": "Photopea", "details": "Raster graphics editing for UI assets.", "projects": ["drone-smasher"] },
+        { "name": "DaVinci Resolve", "details": "Video editing, color correction, and post-production.", "projects": ["drone-smasher"] },
+        { "name": "Excel/Word", "details": "Working with Microsoft Excel spreadsheets using formulas, pivot tables, and data visualization tools. Creating structured technical documentation and reports in Microsoft Word." }
       ]
     },
-    {
-      "name": "Office Tools",
-      "items": [
-        { "name": "Excel / Word", "details": "Advanced spreadsheet operations (formulas, reports) and documentation." }
-      ]
-    },
-
     {
       "name": "Languages",
       "items": [
         {
           "name": "English",
-          "details": "(C1 Level) Language developed since early school years, used in professional work in the Netherlands and during a language course in the UK. Fluent in spoken and written communication, including working with technical documentation and IT terminology."
+          "details": "(C1 Level) Language developed since early school years, used professionally during work in the Netherlands and a language course in England. Fluent communication in speech and writing, including working with technical documentation and IT terminology."
         },
         {
           "name": "Polish",
-          "details": "Native"
+          "details": "Native speaker"
         }
       ]
-
     }
-
   ]
 }

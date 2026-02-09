@@ -1,5 +1,8 @@
 /* --- ZMIENNE I MOTYWY --- */
 :root {
+
+}
+body.theme-creamy{
     --bg-color: #f8d6bb;
     --card-bg: #dddbdb;
     --text-main: #2d3436;
@@ -9,7 +12,6 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     --toolbar-bg: rgba(255, 255, 255, 0.8);
 }
-
 /* ❄️ NORDIC - Zimny, techniczny, profesjonalny */
 body.theme-nordic {
     --bg-color: #eef2f7; /* Jasna baza */
@@ -344,4 +346,25 @@ body.theme-slate .btn-close {
         transform: translateY(-8px); /* Przesunięcie o 8 pikseli w górę */
         box-shadow: 0 15px 25px rgba(0,0,0,0.2);
     }
+}
+
+
+.project-card .card-img-top {
+    width: 100%;
+    height: 250px; /* Ustalona stała wysokość */
+    object-fit: cover; /* Kluczowe: zdjęcie wypełnia obszar, nie tracąc proporcji */
+    object-position: center; /* Centruje kadr zdjęcia */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

@@ -18,10 +18,26 @@ export const initAvatarRotation = (avatars) => {
     }
 };
 
-export const showSkillDetails = (name, details, projects) => {
+// handlers.js
+
+export const showSkillDetails = (name, details, projects, lang = 'pl') => {
     const modalTitle = document.getElementById('skillModalTitle');
     const modalBody = document.getElementById('skillModalBody');
     const modalElem = document.getElementById('skillModal');
+
+    // Słownik tłumaczeń dla modala skilli
+    const labels = {
+        pl: {
+            related: "Powiązane projekty:",
+            view: "Zobacz"
+        },
+        en: {
+            related: "Related projects:",
+            view: "View"
+        }
+    };
+
+    const t = labels[lang] || labels.pl;
 
     modalTitle.textContent = name;
 
@@ -29,12 +45,11 @@ export const showSkillDetails = (name, details, projects) => {
     let content = `<p>${details}</p>`;
 
     if (projects && projects.length > 0) {
-        content += `<hr><p class="small fw-bold">Powiązane projekty:</p><div class="d-flex gap-2 flex-wrap">`;
+        content += `<hr><p class="small fw-bold">${t.related}</p><div class="d-flex gap-2 flex-wrap">`;
         projects.forEach(projectId => {
-            // Zamieniamy ID na ładniejszą nazwę (np. "car-service" -> "Car Service")
             const displayName = projectId.replace(/-/g, ' ').toUpperCase();
             content += `<button class="btn btn-sm btn-info text-white" onclick="goToProject('${projectId}')">
-                            Zobacz: ${displayName} &rarr;
+                            ${t.view}: ${displayName} &rarr;
                         </button>`;
         });
         content += `</div>`;

@@ -16,7 +16,7 @@ const loadData = async (lang) => {
         ]);
 
         ui.renderProfile(config, lang);
-        ui.renderSkills(config.skills_groups);
+        ui.renderSkills(config.skills_groups,lang);
         ui.renderExperience(config.experience, lang);
         ui.renderProjects(projects, lang);
 
@@ -156,8 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Inicjalizacja zapisanego motywu (to już masz, ale upewnij się, że jest)
-    const savedTheme = localStorage.getItem('selectedTheme') || 'theme-creamy';
-    body.className = savedTheme;
+    // Sprawdzamy co jest w pamięci, a jeśli pusto - wybieramy theme-slate
+    const currentTheme = localStorage.getItem('theme') || 'theme-slate';
+    document.body.className = currentTheme;
+
+// Pamiętaj też o ikonie w przycisku!
+    const iconSpan = document.getElementById('current-theme-icon');
+    if (currentTheme === 'theme-slate') {
+        iconSpan.textContent = '🌑';
+    }
     const activeOption = document.querySelector(`[data-theme="${savedTheme}"]`);
     if(activeOption) currentThemeIcon.textContent = activeOption.querySelector('span').textContent;
 });

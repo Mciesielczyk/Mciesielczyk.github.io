@@ -30,26 +30,27 @@ export const renderProfile = (config, lang) => {
         }
     });
 };
-export const renderSkills = (skillsGroups) => {
+export const renderSkills = (skillsGroups, lang) => {
     const container = document.getElementById('skills-container');
+    if (!container) return;
     container.innerHTML = '';
+
     skillsGroups.forEach(group => {
         let groupHtml = `
-            <div class="skill-group-box">
+            <div class="skill-group-box mb-4">
                 <h6 class="skill-group-title">${group.name}</h6>
-                <div class="skills-wrapper">`; // Tu będą skille
+                <div class="skills-wrapper">`;
 
         group.items.forEach((skill, index) => {
             const safeDetails = encodeURIComponent(skill.details);
-            const projectsList = skill.projects ? JSON.stringify(skill.projects) : "[]";
-
-            // Dodajemy inline style z opóźnieniem animacji, żeby każdy ruszał się inaczej
+            // Przetwarzamy tablicę projektów na bezpieczny ciąg znaków dla HTML
+            const projectsList = skill.projects ? JSON.stringify(skill.projects).replace(/"/g, '&quot;') : "[]";
             const delay = (index * 0.2).toFixed(1);
 
             groupHtml += `
                 <span class="badge skill-badge floating-skill" 
                       style="animation-delay: ${delay}s; cursor: pointer;"
-                      onclick='showSkillDetails("${skill.name}", decodeURIComponent("${safeDetails}"), ${projectsList})'>
+                      onclick="showSkillDetails('${skill.name}', decodeURIComponent('${safeDetails}'), ${projectsList}, '${lang}')">
                       ${skill.name}
                 </span>`;
         });
@@ -57,7 +58,6 @@ export const renderSkills = (skillsGroups) => {
         container.innerHTML += groupHtml;
     });
 };
-
 export const renderExperience = (experience, lang) => {
     const itContainer = document.getElementById('experience-list-it');
     const otherContainer = document.getElementById('experience-list-other');
