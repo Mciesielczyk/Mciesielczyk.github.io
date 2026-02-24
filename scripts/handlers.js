@@ -13,7 +13,7 @@ export const initAvatarRotation = (avatars) => {
                     avatarElem.src = avatars[currentIdx];
                     avatarElem.classList.remove('fade-out');
                 }, 500);
-            }, 4000);
+            }, 5000);
         }
     }
 };

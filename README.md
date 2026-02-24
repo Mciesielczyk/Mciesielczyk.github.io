@@ -4,10 +4,10 @@
 
  gotowe, w pełni interaktywne portfolio z systemem motywów i wielojęzycznością. Strona działa dynamicznie – wszystkie treści są wczytywane z plików tekstowych, więc nie trzeba grzebać w kodzie HTML, żeby zmienić opisy.
 
-## 🛠 Technologie
+##  Technologie
 * **HTML / CSS** – struktura i  style.
-* **JavaScript ** – cała logika, zmiana języków i renderowanie danych.
-* **Bootstrap ** – responsywny układ.
+* **JavaScript** – cała logika, zmiana języków i renderowanie danych.
+* **Bootstrap** – responsywny układ.
 
 Repozytorium jest przygotowane tak, aby każdy mógł je łatwo dostosować pod siebie.
 

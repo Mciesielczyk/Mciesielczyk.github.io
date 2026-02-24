@@ -2,7 +2,7 @@
   "profile": {
     "name": "Michał",
     "surname": "Ciesielczyk",
-    "avatars": ["images/avatar1.jpg", "images/avatar2.jpg","images/avatar3.jpg"],
+    "avatars": ["images/avatar1.jpg", "images/avatar2.jpg"],
     "role": "Student 3 roku Informatyki na PK | Tutor w firmie Kodland",
     "github_username": "Mciesielczyk",
     "email": "michaelciesielczyk12@gmail.com",
@@ -11,7 +11,7 @@
     "city": "Kraków"
   },
   "about": {
-    "description": "Jestem studentem 6. semestru informatyki na Politechnice Krakowskiej. Moja droga do IT była naturalnym wyborem – od zawsze najlepiej czułem się w naukach ścisłych, a zainteresowanie matematyką przełożyło się na analityczne podejście do rozwiązywania problemów. Nie boję się wyzwań; bezpośrednio po maturze podjąłem pracę zawodową, co pozwoliło mi wypracować odpowiedzialność i świetną organizację czasu jeszcze przed rozpoczęciem kariery technicznej. Obecnie szukam pierwszej szansy zawodowej, aby zobaczyć, jak od środka funkcjonują procesy w firmach technologicznych i wnieść wartość do realnych, komercyjnych projektów."
+    "description": "Jestem studentem 6. semestru informatyki na Politechnice Krakowskiej. Moja droga do IT była naturalnym wyborem – od zawsze najlepiej czułem się w naukach ścisłych, a zainteresowanie matematyką przełożyło się na analityczne podejście do rozwiązywania problemów. Nie boję się wyzwań; bezpośrednio po maturze podjąłem pracę dorywczą, co pozwoliło mi wypracować odpowiedzialność i organizację czasu. Obecnie szukam pierwszej szansy zawodowej w IT, aby zobaczyć, jak od środka funkcjonują procesy w firmach technologicznych i wnieść wartość do realnych, komercyjnych projektów."
   },
   "experience": [
     {
@@ -46,7 +46,7 @@
       "period": "06.2025-09.2025",
       "tasks": [
         "Obsługa maszyny czyszczącej do utrzymania nawierzchni serwisu.",
-        "Dbanie o porządek w strefie serwisowej zgodnie.",
+        "Dbanie o porządek w strefie serwisowej zgodnie z wymaganiami firmy.",
         "Wsparcie logistyczne wewnątrz serwisu i dbałość o infrastrukturę obiektu."
       ]
     },

@@ -17,16 +17,27 @@ export const renderProfile = (config, lang) => {
 
     contactData.forEach(item => {
         if (item.value) {
-            const link = document.createElement('a');
-            link.href = item.href;
-            link.className = 'contact-item text-decoration-none'; // Dodajemy klasę Bootstrapa wyłączającą podkreślenie
-            link.target = item.label === 'In' || item.label === 'Git' ? '_blank' : '_self';
+            // Sprawdzamy, czy to miasto (zakładam, że label to 'City' lub 'Miasto')
+            const isCity = item.label === 'City' || item.label === 'Miasto';
 
-            link.innerHTML = `
-                <span class="contact-label">${item.label}:</span>
-                <span class="contact-value">${item.value}</span>
-            `;
-            contactContainer.appendChild(link);
+            // Tworzymy 'div' dla miasta, a 'a' dla reszty
+            const element = document.createElement(isCity ? 'div' : 'a');
+
+            element.className = 'contact-item text-decoration-none';
+
+            if (!isCity) {
+                element.href = item.href;
+                element.target = (item.label === 'In' || item.label === 'Git') ? '_blank' : '_self';
+            } else {
+                element.classList.add('no-click'); // Opcjonalna klasa do CSS
+            }
+
+            element.innerHTML = `
+            <span class="contact-label">${item.label}:</span>
+            <span class="contact-value">${item.value}</span>
+        `;
+
+            contactContainer.appendChild(element);
         }
     });
 };
